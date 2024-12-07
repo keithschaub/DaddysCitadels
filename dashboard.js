@@ -1,3 +1,23 @@
+// Import Firebase modules (only needed if using ES modules)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+// Firebase configuration (from your snippet)
+const firebaseConfig = {
+    apiKey: "AIzaSyCzEQORtK1jPwQVGCf5smucXIuQFY1H6kQ",
+    authDomain: "daddyscitadels.firebaseapp.com",
+    databaseURL: "https://daddyscitadels-default-rtdb.firebaseio.com",
+    projectId: "daddyscitadels",
+    storageBucket: "daddyscitadels.appspot.com",
+    messagingSenderId: "291613245854",
+    appId: "1:291613245854:web:9a4fd2bc83a3ed7094968f",
+    measurementId: "G-07D134EF4K"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
 // Simulated in-memory data for players
 let players = JSON.parse(sessionStorage.getItem('players')) || [
     { id: 1, name: "Player 1", score: 0, district: [] },
