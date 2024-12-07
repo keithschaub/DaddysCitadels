@@ -18,6 +18,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
+console.log("Firebase initialized:", app.name);
+
+
 // Simulated in-memory data for players
 let players = JSON.parse(sessionStorage.getItem('players')) || [
     { id: 1, name: "Player 1", score: 0, district: [] },
