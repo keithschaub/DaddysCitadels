@@ -1,0 +1,257 @@
+/* General Styles */
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #f4f1ea;
+    margin: 0;
+    padding: 0;
+    color: #6b4e2e;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0;
+    color: #6b4e2e;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #6b4e2e;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: #d4b481;
+    color: #fff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #bfa06e;
+}
+
+/* Dashboard Styles */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for 3x3 layout */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+.player-tile {
+    border: 2px solid #d4b481;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background: #f4f1ea;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.player-tile:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Score Styling for 3x3 Dashboard */
+.player-tile p {
+    font-size: 2em; /* Bigger font size for the score */
+    font-weight: bold; /* Make it bolder */
+    color: #6b4e2e;
+    margin: 10px 0; /* Add spacing for better alignment */
+}
+
+/* Cards inside 3x3 Dashboard */
+.player-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.card {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect for Add/Delete card selection */
+.card:hover {
+    transform: scale(1.1); /* Slight growth effect */
+    cursor: pointer; /* Change mouse pointer to a pointing finger */
+}
+
+/* Card colors */
+.card.yellow {
+    background-color: #f0c808;
+}
+
+.card.red {
+    background-color: #e63946;
+}
+
+.card.blue {
+    background-color: #457b9d;
+}
+
+.card.green {
+    background-color: #2a9d8f;
+}
+
+.card.purple {
+    background-color: #6a4c93;
+}
+
+/* Player Dashboard Styles */
+.player-dashboard {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #d4b481;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Player Header */
+.player-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.player-icon {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #d4b481;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    margin-right: 20px;
+}
+
+.player-details h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #6b4e2e;
+}
+
+/* Score Styling for Player Pages */
+.player-details h2 {
+    font-size: 2.2em; /* Bigger font size for the score */
+    font-weight: bold; /* Make it bolder */
+    margin: 5px 0 0;
+    color: #6b4e2e;
+}
+
+/* Name Input Section */
+.player-name-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.player-name-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #d4b481;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.player-name-input button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #d4b481;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.control-button {
+    padding: 10px 20px;
+    background-color: #d4b481;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.control-button:hover {
+    background-color: #bfa06e;
+}
+
+/* District Section */
+.district-section h2 {
+    margin-bottom: 10px;
+    color: #6b4e2e;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Add Card Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+}
+
+.popup-content .card-grid {
+    gap: 10px;
+}
+
+.popup-content button {
+    margin-top: 20px;
+}
+
+/* Back Button */
+#back-button {
+    display: block;
+    margin: 20px auto 0;
+    width: 200px;
+    text-align: center;
+}
