@@ -1,3 +1,25 @@
+// Import Firebase modules (only needed if using ES modules)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+// Firebase configuration (from your snippet)
+const firebaseConfig = {
+    apiKey: "AIzaSyCzEQORtK1jPwQVGCf5smucXIuQFY1H6kQ",
+    authDomain: "daddyscitadels.firebaseapp.com",
+    databaseURL: "https://daddyscitadels-default-rtdb.firebaseio.com",
+    projectId: "daddyscitadels",
+    storageBucket: "daddyscitadels.appspot.com",
+    messagingSenderId: "291613245854",
+    appId: "1:291613245854:web:9a4fd2bc83a3ed7094968f",
+    measurementId: "G-07D134EF4K"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+console.log("Firebase initialized:", app.name);
+
 // Get Player ID from URL
 const urlParams = new URLSearchParams(window.location.search);
 const playerId = parseInt(urlParams.get('id'), 10);
