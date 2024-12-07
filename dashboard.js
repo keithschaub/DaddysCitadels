@@ -1,6 +1,7 @@
-// Import Firebase modules (only needed if using ES modules)
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+// Firebase is globally available via <script> tags in index.html
+const { initializeApp } = firebase;
+const { getDatabase, ref, set, onValue } = firebase.database;
+
 
 // Firebase configuration (from your snippet)
 const firebaseConfig = {
