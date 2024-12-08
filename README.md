@@ -7,3 +7,4 @@ link to data base: https://daddyscitadels-default-rtdb.firebaseio.com/
 link to data base project: https://console.firebase.google.com/project/daddyscitadels/database/daddyscitadels-default-rtdb/data
 
 12/8 - Added ALL cards, added TEXT for each UNIQue card, changed colors, removed () around points
+12/8 - Added version control in index.html to force refresh of cache when new versions are uploaded
