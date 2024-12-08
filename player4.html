@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database-compat.js"></script>
+    <script src="firebase-init.js"></script>
+
 </head>
 <body>
     <div class="player-dashboard">
@@ -21,7 +25,7 @@
 
         <!-- Name Input Section -->
         <div class="player-name-input">
-            <input type="text" id="name-input" placeholder="Enter your name" />
+            <input type="text" id="player-name-input" placeholder="Enter your name" />
             <button id="set-name-button">Set Name</button>
         </div>
 
