@@ -296,13 +296,15 @@ function removeCardFromDistrict(index) {
         const district = snapshot.val() || [];
         district.splice(index, 1);
 
-        const newScore = district
-            .map((name) => cards.find((c) => c.name === name)?.points || 0)
-            .reduce((sum, points) => sum + points, 0);
+        const newScore = district.reduce((sum, card) => sum + card.points, 0);
 
         playerRef.update({
             district: district,
             score: newScore,
+        }).then(() => {
+            // Reset delete mode after card deletion
+            deleteMode = false;
+            document.getElementById("delete-button").style.backgroundColor = "";
         });
     });
 }
