@@ -16,22 +16,34 @@ function renderDashboard(players) {
         const playerDiv = document.createElement("div");
         playerDiv.className = "player-tile";
 
+        // Render the district cards
+        const districtCards = player.district
+            ? player.district
+                  .map((card) => {
+                      // Ensure card data exists before rendering
+                      const name = card.name || "Unknown Card";
+                      const points = card.points || 0;
+                      const color = card.color || "default";
+
+                      return `
+                          <span class="card ${color}">
+                              ${name} ${points}
+                              ${
+                                  card.description
+                                      ? `<br><small>${card.description}</small>`
+                                      : ""
+                              }
+                          </span>
+                      `;
+                  })
+                  .join("")
+            : "No cards";
+
         // Player tile content
         playerDiv.innerHTML = `
             <h2>${player.name || `Player ${id}`}</h2>
             <p>Score: ${player.score || 0}</p>
-            <div class="player-cards">
-                ${
-                    player.district
-                        ? player.district
-                              .map(
-                                  (card) =>
-                                      `<span class="card ${card.color}">${card.name} (${card.points})</span>`
-                              )
-                              .join("")
-                        : "No cards"
-                }
-            </div>
+            <div class="player-cards">${districtCards}</div>
         `;
 
         // Click to navigate to the player's page
