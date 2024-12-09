@@ -7,11 +7,20 @@ body {
     color: #6b4e2e;
 }
 
+@font-face {
+	font-family: 'CloisterBlack';
+	src: url('fonts/CloisterBlack.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 20px 0;
-    color: #6b4e2e;
+    font-family: 'CloisterBlack', serif; /* CloisterBlack */
+    font-size: 3.0em; /* Adjust size */
+    color: #8b5e3c; /* Optional: Medieval brownish shade */
+    text-align: center; /* Center align */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* optional shadow */
 }
 
 h2 {
@@ -44,13 +53,12 @@ button:hover {
 }
 
 .player-tile {
-    border: 2px solid #d4b481;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    background: #f4f1ea;
+    background: url('background/parchment-texture.jpg') no-repeat center center;
+    background-size: cover; /* Adjust the size to fit the tile */
     cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px; /* Slight rounding for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
     transition: transform 0.2s ease-in-out;
 }
 
@@ -200,6 +208,27 @@ button:hover {
     background-color: #bfa06e;
 }
 
+.control-button-stone {
+    background-color: #c3a97d; /* Light parchment or bronze-like color */
+    color: #4a2c0a; /* Dark brown text to match a medieval feel */
+    font-family: "Cinzel", serif; /* Matches the medieval theme */
+    font-weight: bold;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -2px -2px 4px rgba(255, 255, 255, 0.2); /* Subtle 3D effect */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions */}
+
+.control-button-stone:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), inset 3px 3px 6px #a7a5a3, inset -3px -3px 6px #fff;
+}
+
+.control-button-stone:active {
+    transform: translateY(1px);
+    box-shadow: inset 2px 2px 4px #767676, inset -2px -2px 4px #fff;
+}
+
+
 /* District Section */
 .district-section h2 {
     margin-bottom: 10px;
@@ -255,3 +284,4 @@ button:hover {
     width: 200px;
     text-align: center;
 }
+
